@@ -1,14 +1,28 @@
 {
-  "name": "vue-double-select",
-  "version": "0.1.0",
-  "private": true,
+  "name": "v-double-select",
+  "version": "1.0.0",
+  "private": false,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build --target lib --name v-double-select ./src/index.js",
+    "build-wc": "vue-cli-service build --target wc --name v-double-select 'src/components/*.vue'",
+    "build-wc-async": "vue-cli-service build --target wc-async --name v-double-select 'src/components/*.vue'",
     "lint": "vue-cli-service lint"
   },
+  "main": "dist/v-double-select.umd.js",
+  "module": "dist/v-double-select.esm.js",
+  "unpkg": "dist/v-double-select.min.js",
+  "style": "dist/v-double-select.css",
+  "keywords": [
+    "double-select",
+    "vue",
+    "javascript"
+  ],
+  "files": [
+    "dist/*"
+  ],
   "dependencies": {
-    "vue": "^2.5.22"
+    "vue": "^2.6.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
@@ -17,6 +31,8 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.5.21"
   }
 }
