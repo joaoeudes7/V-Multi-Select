@@ -11,7 +11,7 @@ import PanelSelect from './Panel-Select';
 import SwitchHelper from './SwitchHelper'
 
 export default {
-  name: "VDoubleSelect",
+  name: "VMultiSelect",
   components: {
     PanelSelect,
     SwitchHelper

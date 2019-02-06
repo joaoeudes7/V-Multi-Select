@@ -1,29 +1,29 @@
 {
-  "name": "v-double-select",
+  "name": "v-multi-select",
   "version": "1.0.1",
   "license": "MIT",
-  "homepage": "https://github.com/joaoeudes7/V-Double-Select#readme",
+  "homepage": "https://github.com/joaoeudes7/V-Multi-Select#readme",
   "author": {
     "name": "João Eudes Lima",
     "email": "joaoeudes7@gmail.com",
     "url": "https://github.com/joaoeudes7"
   },
-  "repository": "https://github.com/joaoeudes7/V-Double-Select",
+  "repository": "https://github.com/joaoeudes7/V-Multi-Select",
   "scripts": {
     "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build --target lib --name v-double-select ./src/index.js",
-    "build-wc": "vue-cli-service build --target wc --name v-double-select 'src/components/*.vue'",
-    "build-wc-async": "vue-cli-service build --target wc-async --name v-double-select 'src/components/*.vue'",
+    "build": "vue-cli-service build --target lib --name v-multi-select ./src/index.js",
+    "build-wc": "vue-cli-service build --target wc --name v-multi-select 'src/components/*.vue'",
+    "build-wc-async": "vue-cli-service build --target wc-async --name v-multi-select 'src/components/*.vue'",
     "lint": "vue-cli-service lint"
   },
-  "main": "dist/v-double-select.umd.js",
-  "module": "dist/v-double-select.esm.js",
-  "unpkg": "dist/v-double-select.min.js",
-  "style": "dist/v-double-select.css",
+  "main": "dist/v-multi-select.umd.js",
+  "module": "dist/v-multi-select.esm.js",
+  "unpkg": "dist/v-multi-select.min.js",
+  "style": "dist/v-multi-select.css",
   "keywords": [
-    "double-select",
+    "double-select-list",
     "vue",
-    "javascript"
+    "multi-select-list"
   ],
   "files": [
     "dist/*"

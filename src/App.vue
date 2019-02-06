@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import VDoubleSelect from "./components/V-Double-Select";
+import VDoubleSelect from "./components/V-Multi-Select";
 
 export default {
   name: "app",

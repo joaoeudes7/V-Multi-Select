@@ -1,10 +1,10 @@
-import VDoubleSelect from './components/V-Double-Select.vue';
+import VMultiSelect from './components/V-Multi-Select.vue';
 
 // Declare install function executed by Vue.use()
 export function install(Vue) {
 	if (install.installed) return;
 	install.installed = true;
-	Vue.component('VDoubleSelect', VDoubleSelect);
+	Vue.component('VMultiSelect', VMultiSelect);
 }
 
 // Create module definition for Vue.use()
@@ -23,4 +23,4 @@ if (GlobalVue) {
 	GlobalVue.use(plugin);
 }
 
-export default VDoubleSelect;
+export default VMultiSelect;
