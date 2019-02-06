@@ -34,15 +34,15 @@ export default {
       const indexOf = this.dataLeft.indexOf(item);
       this.dataLeft.splice(indexOf, 1);
       this.dataRight.push(item);
-      this.onSelect(item);
       this.onChange();
+      this.onSelect(item);
     },
     selectRight(item) {
       const indexOf = this.dataRight.indexOf(item);
       this.dataRight.splice(indexOf, 1);
       this.dataLeft.push(item);
-      this.onSelect(item);
       this.onChange();
+      this.onSelect(item);
     },
     onSelect(item) {
       this.$emit('select', item)

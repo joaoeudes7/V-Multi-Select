@@ -1,7 +1,14 @@
 {
   "name": "v-double-select",
-  "version": "1.0.0",
-  "private": false,
+  "version": "1.0.1",
+  "license": "MIT",
+  "homepage": "https://github.com/joaoeudes7/V-Double-Select#readme",
+  "author": {
+    "name": "João Eudes Lima",
+    "email": "joaoeudes7@gmail.com",
+    "url": "https://github.com/joaoeudes7"
+  },
+  "repository": "https://github.com/joaoeudes7/V-Double-Select",
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build --target lib --name v-double-select ./src/index.js",
@@ -22,17 +29,17 @@
     "dist/*"
   ],
   "dependencies": {
-    "vue": "^2.6.2"
+    "vue": "2.6.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.4.0",
-    "@vue/cli-plugin-eslint": "^3.4.0",
-    "@vue/cli-service": "^3.4.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.21"
+    "@vue/cli-plugin-babel": "3.4.0",
+    "@vue/cli-plugin-eslint": "3.4.0",
+    "@vue/cli-service": "3.4.0",
+    "babel-eslint": "10.0.1",
+    "eslint": "5.13.0",
+    "eslint-plugin-vue": "5.1.0",
+    "node-sass": "4.11.0",
+    "sass-loader": "7.1.0",
+    "vue-template-compiler": "2.6.2"
   }
 }

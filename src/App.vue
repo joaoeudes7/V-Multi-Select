@@ -29,12 +29,16 @@ export default {
   },
   methods: {
     showData(data) {
-      console.log(data);
+      console.group('New Change:', data);
+    },
+    getDataLeft() {
       console.log(this.$refs.DoubleSelect.dataLeft);
+    },
+    getDataRight() {
       console.log(this.$refs.DoubleSelect.dataRight);
     },
     showSelected(data) {
-      console.log("New Selected:", data);
+      console.log(`New Selected: ${data}`);
     }
   }
 };
