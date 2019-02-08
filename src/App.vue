@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import VDoubleSelect from "./components/V-Multi-Select";
+import VDoubleSelect from './components/V-Multi-Select';
 
 export default {
-  name: "app",
+  name: 'app',
   components: {
     VDoubleSelect
   },

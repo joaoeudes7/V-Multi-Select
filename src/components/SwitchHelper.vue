@@ -1,7 +1,13 @@
 <template>
   <div class="switch">
     <button class="button">
-      <span class="icon" @click="switchAll" v-html="icons.switchIcon"/>
+      <span class="icon" @click="onSwitchAll" v-html="icons.switchIcon"/>
+    </button>
+    <button class="button">
+      <span class="icon" @click="onMoveLeft" v-html="icons.arrowLeft"/>
+    </button>
+    <button class="button">
+      <span class="icon" @click="onMoveRight" v-html="icons.arrowRight"/>
     </button>
   </div>
 </template>
@@ -15,8 +21,14 @@ export default {
     icons: _icons
   }),
   methods: {
-    switchAll() {
+    onSwitchAll() {
       this.$emit('switchAll')
+    },
+    onMoveLeft() {
+        this.$emit('moveLeft')
+    },
+    onMoveRight() {
+        this.$emit('moveRight')
     }
   }
 };

@@ -1,7 +1,7 @@
 <template>
   <div id="Panel">
     <div class="container-input">
-      <input class="search" placeholder="Pesquisar..." v-model="textTyped">
+      <input class="search" placeholder="Search..." v-model="textTyped">
     </div>
     <div class="list">
       <template v-for="(item, index) in filtedData">
@@ -17,30 +17,31 @@
 
 <script>
 export default {
-  name: "Panel",
+  name: 'Panel',
   props: {
     items: { type: Array, required: true },
     field: { type: String }
   },
   data: () => ({
-    textTyped: ""
+    textTyped: ''
   }),
   methods: {
     getItems() {
       return this.filtedData;
     },
     onSelect(item) {
-      this.$emit("select", item);
+      this.$emit('select', item);
+    },
+    filterSearch(item) {
+      const _item = this.field ? item[this.field] : item;
+      return _item.toLowerCase().includes(this.textTyped.toLowerCase());
     }
   },
   computed: {
     filtedData() {
       let data = this.items;
       if (this.textTyped.trim()) {
-        data = data.filter(item => {
-          const _item = this.field ? item[this.field] : item;
-          return _item.toLowerCase().includes(this.textTyped.toLowerCase());
-        });
+        data = data.filter(this.filterSearch);
       }
       return data;
     }

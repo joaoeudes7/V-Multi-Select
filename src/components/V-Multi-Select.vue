@@ -1,7 +1,7 @@
 <template>
   <div id="V-Double-Select">
     <PanelSelect :field="field" :items="dataLeft" @select="selectLeft"/>
-    <SwitchHelper @switchAll="switchAll"/>
+    <SwitchHelper @switchAll="switchAll" @moveLeft="moveAllLeft" @moveRight="moveAllRight"/>
     <PanelSelect :field="field" :items="dataRight" @select="selectRight"/>
   </div>
 </template>
@@ -11,7 +11,7 @@ import PanelSelect from './Panel-Select';
 import SwitchHelper from './SwitchHelper'
 
 export default {
-  name: "VMultiSelect",
+  name: 'VMultiSelect',
   components: {
     PanelSelect,
     SwitchHelper
@@ -30,17 +30,19 @@ export default {
     this.dataRight = this.right;
   },
   methods: {
+    removeItemArray(array, item) {
+      const indexOf = array.indexOf(item);
+      array.splice(indexOf, 1);
+    },
     selectLeft(item) {
-      const indexOf = this.dataLeft.indexOf(item);
-      this.dataLeft.splice(indexOf, 1);
-      this.dataRight.push(item);
+      this.removeItemArray(this.dataLeft, item);
+      this.dataRight = [...this.dataRight, item];
       this.onChange();
       this.onSelect(item);
     },
     selectRight(item) {
-      const indexOf = this.dataRight.indexOf(item);
-      this.dataRight.splice(indexOf, 1);
-      this.dataLeft.push(item);
+      this.removeItemArray(this.dataRight, item);
+      this.dataLeft = [...this.dataLeft, item];
       this.onChange();
       this.onSelect(item);
     },
@@ -52,6 +54,16 @@ export default {
       this.dataLeft = this.dataRight.slice()
       this.dataRight = aux.slice();
       this.onChange();
+    },
+    moveAllRight() {
+      this.dataLeft = [...new Set([...this.dataLeft, ...this.dataRight])]
+      this.dataRight = []
+      this.onChange()
+    },
+    moveAllLeft() {
+      this.dataRight = [...new Set([...this.dataLeft, ...this.dataRight])]
+      this.dataLeft = []
+      this.onChange()
     },
     onChange() {
       const changeReport = {
