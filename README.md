@@ -1,4 +1,6 @@
 # V-Multi-select
+Simple Multi-Select in Vue
+
 [![npm](https://img.shields.io/npm/v/v-multi-select.svg)
 ![bundlephobia](https://img.shields.io/bundlephobia/minzip/v-multi-select.svg?style=flat)
 ![npm](https://img.shields.io/npm/dm/v-multi-select.svg)
