@@ -17,8 +17,8 @@ export default {
     SwitchHelper
   },
   props: {
-    left: { type: Array, required: true },
-    right: { type: Array, required: true },
+    left: { type: Array, required: true, default: () => [] },
+    right: { type: Array, required: true, default: () => [] },
     field: { type: String }
   },
   data: () => ({
