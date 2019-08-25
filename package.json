@@ -1,6 +1,6 @@
 {
   "name": "v-multi-select",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "license": "MIT",
   "homepage": "https://github.com/joaoeudes7/V-Multi-Select#readme",
   "author": {
@@ -29,17 +29,17 @@
     "dist/*"
   ],
   "dependencies": {
-    "vue": "2.6.2"
+    "vue": "2.6.10"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "3.4.0",
-    "@vue/cli-plugin-eslint": "3.4.0",
-    "@vue/cli-service": "3.4.0",
-    "babel-eslint": "10.0.1",
-    "eslint": "5.13.0",
-    "eslint-plugin-vue": "5.1.0",
+    "@vue/cli-plugin-babel": "3.11.0",
+    "@vue/cli-plugin-eslint": "3.11.0",
+    "@vue/cli-service": "3.11.0",
+    "babel-eslint": "10.0.2",
+    "eslint": "6.2.2",
+    "eslint-plugin-vue": "5.2.3",
     "node-sass": "4.11.0",
-    "sass-loader": "7.1.0",
-    "vue-template-compiler": "2.6.2"
+    "sass-loader": "7.3.1",
+    "vue-template-compiler": "2.6.10"
   }
 }
